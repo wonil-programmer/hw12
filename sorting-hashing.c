@@ -254,7 +254,7 @@ int bubbleSort(int *a)
 	/* 배열 크기만큼 반복하며 정렬 수행 */
 	for(i = 0; i < MAX_ARRAY_SIZE; i++)
 	{
-		for (j = 0; j < MAX_ARRAY_SIZE; j++)
+		for (j = 0; j < MAX_ARRAY_SIZE - i; j++)
 		{
 			/* 이전 원소가 더 클 경우 SWAP 진행 */
 			if (a[j-1] > a[j] && j > 0)

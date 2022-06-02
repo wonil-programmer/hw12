@@ -257,7 +257,7 @@ int bubbleSort(int *a)
 		for (j = 0; j < MAX_ARRAY_SIZE; j++)
 		{
 			/* 이전 원소가 더 클 경우 SWAP 진행 */
-			if (a[j-1] > a[j])
+			if (a[j-1] > a[j] && j > 0)
 			{
 				t = a[j-1];
 				a[j-1] = a[j];

@@ -1,7 +1,7 @@
 
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h> // srand() 사용 위한 라이브러리 추가
+#include <stdlib.h> // malloc() 및 srand(), rand() 포함 
+#include <time.h> // rand(), srand() 사용 위한 라이브러리 추가
 
 #define MAX_ARRAY_SIZE 13 
 #define MAX_HASH_TABLE_SIZE MAX_ARRAY_SIZE
@@ -27,14 +27,15 @@ int search(int *ht, int key);
 int main()
 {
     printf("------ [2019036068] [허원일] ------\n");
+
 	char command;
 	int *array = NULL; // 배열 포인터 선언 및 초기화
 	int *hashtable = NULL; // 해시테이블 포인터 선언 및 초기화
+	/* key, index 초기화 */
 	int key = -1; 
 	int index = -1;
 
-	srand(time(NULL));
-
+	srand(time(NULL)); // 랜덤시간 seed로 난수 생성
 	do{
 		printf("----------------------------------------------------------------\n");
 		printf("                        Sorting & Hashing                       \n");
@@ -138,7 +139,7 @@ int initialize(int** a)
 
 	/* 랜덤값을 배열의 값으로 저장 */
 	for(int i = 0; i < MAX_ARRAY_SIZE; i++)
-		temp[i] = rand() % MAX_ARRAY_SIZE;
+		temp[i] = rand() % MAX_ARRAY_SIZE; 
 
 	return 0;
 }

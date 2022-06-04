@@ -350,9 +350,9 @@ int quickSort(int *a, int n)
 	return 0;
 }
 
-
+/* hashCode를 반환하는 함수 */
 int hashCode(int key) {
-   return key % MAX_HASH_TABLE_SIZE;
+   return key % MAX_HASH_TABLE_SIZE; // hashCode :들어온 key값을 테이블 크기로 나눈 나머지로 설정
 }
 
 /* 배열 a에 대해 hash table을 생성하는 함수 */
